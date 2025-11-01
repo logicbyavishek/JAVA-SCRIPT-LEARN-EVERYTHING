@@ -1,4 +1,21 @@
-//Number.MAX_SAFE_INTEGER
-//9007199254740991
+//Operatrors in JavaScript
+console.log("10"+1);
+console.log("10"-1);
+console.log(true+false);
+console.log(!!"Avishek");
+console.log(!!"Sheryians");
 
-console.log(Number.MAX_SAFE_INTEGER);
+//convert using unary
+
+let str ="42";
+let num = +str;
+console.log( num);
+
+// use ternary operator
+let age = 20;
+let msg = age>=18?"Adult":"Minor";
+console.log(msg);
+
+
+
+
