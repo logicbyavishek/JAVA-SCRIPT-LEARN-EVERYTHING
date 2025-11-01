@@ -1,5 +1,4 @@
-let age =18;
-console.log(age);
-age = 20;
-console.log(age);
-// let age = 22;  -- can be reassigned but cannot be redeclared
+const pi = 3.14;
+console.log(pi);
+// pi = 3.1459;  cannot be reassigned
+// const pi = 3.16;  cannot be redeclared 
