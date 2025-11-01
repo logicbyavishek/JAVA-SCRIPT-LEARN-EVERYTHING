@@ -1,18 +1,22 @@
-// typeof Operator
-console.log(typeof 10); // number
-console.log(typeof 'Hello'); // string
-console.log(typeof true); // boolean
-console.log(typeof undefined); // undefined
-console.log(typeof null); // object
-console.log(typeof { name: 'John', age: 30 }); // object
-console.log(typeof [1, 2, 3]); // object
-console.log(typeof function() {}); // function
-console.log(typeof Symbol('id')); // symbol
+// Type Coercion in JavaScript
 
-// Dynamic Typing
-let data = 42; // Initially a number
-console.log(typeof data); // number
-data = 'Now I am a string'; // Now a string
-console.log(typeof data); // string
-data = true; // Now a boolean
-console.log(typeof data); // boolean
+// 1. String Coercion
+let str1 = 'Hello' + 5; // 'Hello5'
+let str2 = 'The answer is ' + true; // 'The answer is true'
+let str3 = '10'+2; // '102'
+console.log(str1);
+console.log(str2);
+console.log(str3);
+
+
+// 2. Number Coercion
+let num1 = '10' - 2; // 8
+let num2 = '5' * '4'; // 20
+console.log(num1);
+console.log(num2);
+
+// 3. Boolean Coercion
+let bool1 = !!'non-empty string'; // true
+let bool2 = !!0; // false
+console.log(bool1);
+console.log(bool2);
