@@ -167,8 +167,50 @@
 // 18. Ask user 5 numbers. Count how many are positive
 // Use loop + condition + counter.
 
+// function checkNumber() {
+//     let num = prompt("Enter a number");
+//     if (num === null){
+//         console.warn("You pressed Cancel Button Bhai");
+//         return null;
+//     }
+//     num = num.trim();
+//     if (num === ""){
+//         console.warn("Bhai, kuch likhle space mat de!");
+//         return "";
+//     }
+//     if (isNaN(num)){
+//         console.warn("Bhai, number de de!");
+//         return null;
+//     }
+//     // console.log("Confirmed, ye number hai:", Number(num));
+//     return Number(num);
+// }
+
+// function userinput(){
+//     let i =1;
+//     while(i<6){
+//         let num = checkNumber();
+//         if(num===null||num===""){
+//             continue;
+//         }else{
+//             let msg = (num >0)?`Number ${num} are Possitive`:(num===0)?`you enterd zero nither possitive nor negetive`:`Number ${num} are Negative`;
+//             console.log(msg);
+//         }
+//         i++;
+//     }
+// }
+
+// userinput();
+
+//
+// 19. ATM Simulator – Allow 3 withdrawals
+// Start with ₹1000 balance. Ask withdrawal amount 3 times.
+// If enough balance → deduct
+// Else → print “Insufficient balance”
+
+let bal = 1000;
 function checkNumber() {
-    let num = prompt("Enter a number");
+    let num = prompt("Enter Widthdral ammount Allow only Three widthdrawl");
     if (num === null){
         console.warn("You pressed Cancel Button Bhai");
         return null;
@@ -182,22 +224,28 @@ function checkNumber() {
         console.warn("Bhai, number de de!");
         return null;
     }
-    // console.log("Confirmed, ye number hai:", Number(num));
     return Number(num);
 }
 
 function userinput(){
-    let i =1;
-    while(i<6){
+    let max_widthdrawl_times=3;
+    while(max_widthdrawl_times>0){
         let num = checkNumber();
         if(num===null||num===""){
             continue;
         }else{
-            let msg = (num >0)?`Number ${num} are Possitive`:(num===0)?`you enterd zero nither possitive nor negetive`:`Number ${num} are Negative`;
-            console.log(msg);
+            if(num>bal){
+                console.log("Insufficient Balance");
+            }else{
+                bal-=num;
+                console.log(`${num} ammount deduct from your bal current bal ${bal}`);
+            }
         }
-        i++;
+        max_widthdrawl_times--;
+        console.log(`${max_widthdrawl_times} attempts left `);
+
     }
+    console.log(`Maximum withdrawal attempts reached. Current balance: ${bal}`);
 }
 
 userinput();
