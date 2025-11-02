@@ -152,13 +152,52 @@
 // 17. Print only first 3 odd numbers from 1 to 20
 // Use loop. Stop with break after 3 odd prints.
 
-console.log("Print only first 3 odd numbers from 1 to 20    ");
-let odd =0;
-for(let i = 1 ; i<=20 ; i++){
-    if(i%2!==0){
-        console.log(i);
-        odd++;
-    }else if(odd===3){
-        break;
+// console.log("Print only first 3 odd numbers from 1 to 20    ");
+// let odd =0;
+// for(let i = 1 ; i<=20 ; i++){
+//     if(i%2!==0){
+//         console.log(i);
+//         odd++;
+//     }else if(odd===3){
+//         break;
+//     }
+// }
+
+//
+// 18. Ask user 5 numbers. Count how many are positive
+// Use loop + condition + counter.
+
+function checkNumber() {
+    let num = prompt("Enter a number");
+    if (num === null){
+        console.warn("You pressed Cancel Button Bhai");
+        return null;
+    }
+    num = num.trim();
+    if (num === ""){
+        console.warn("Bhai, kuch likhle space mat de!");
+        return "";
+    }
+    if (isNaN(num)){
+        console.warn("Bhai, number de de!");
+        return null;
+    }
+    // console.log("Confirmed, ye number hai:", Number(num));
+    return Number(num);
+}
+
+function userinput(){
+    let i =1;
+    while(i<6){
+        let num = checkNumber();
+        if(num===null||num===""){
+            continue;
+        }else{
+            let msg = (num >0)?`Number ${num} are Possitive`:(num===0)?`you enterd zero nither possitive nor negetive`:`Number ${num} are Negative`;
+            console.log(msg);
+        }
+        i++;
     }
 }
+
+userinput();
