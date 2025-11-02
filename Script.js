@@ -1,24 +1,56 @@
-// 11. Allow only 3 attempts to enter correct password
-// If user gets it right early, stop. If not → “Account locked”
+// // 11. Allow only 3 attempts to enter correct password
+// // If user gets it right early, stop. If not → “Account locked”
 
-let oldPassword = "Password@log";
+// let oldPassword = "Password@log";
 
-function checkPassword() {
-    let Password = prompt("Enter Your Password");
-    if (Password === null) return console.error(" Access not granted -->You pressed Cancel Button Bhai");
-    if (Password === "") return console.error("Access not granted -->   You enter nothing ");
+// function checkPassword() {
+//     let Password = prompt("Enter Your Password");
+//     if (Password === null) return console.error(" Access not granted -->You pressed Cancel Button Bhai");
+//     if (Password === "") return console.error("Access not granted -->   You enter nothing ");
 
-    return Password;
+//     return Password;
+// }
+
+// for(let i=1; i<4 ; i++){
+//     let Password =checkPassword();
+//     if(oldPassword===Password){
+//         console.log("You're logged in");
+//         break;
+//     }
+//     if(i===3){
+//         console.log("Account Locked");
+//         break;        
+//     }
+// }
+//
+// 
+// 12. Ask user for words until they type “stop”. Count how many times they typed “yes”
+// Loop until "stop" is typed. Count "yes".
+
+function checkprompt() {
+    let userInput = prompt("Enter Your Input types Yes - for continue & Stop for stop");
+    if (userInput === null){
+        console.error(" Access not granted -->You pressed Cancel Button Bhai");
+        return null;
+    }
+    if (userInput === ""){
+        console.error("Access not granted -->   You enter nothing ");
+        return "";
+    }
+
+    return userInput;
 }
 
-for(let i=1; i<4 ; i++){
-    let Password =checkPassword();
-    if(oldPassword==Password){
-        console.log("You're logged in");
-        break;
-    }
-    if(i===3){
-        console.log("Account Locked");
-        break;        
+let count = 0 ;
+
+while(true){
+    let userInput = checkprompt();
+    if(userInput===null) continue;  //early return pattern
+    if(userInput.toLocaleLowerCase()==="yes"){      //Case-Insensitive Check
+        count++;
+    }else if(userInput.toLocaleLowerCase()==="stop"){
+        console.log(" You type stop and now exist the loop");
+        break;   // user type "stop" confirm and exit loop
     }
 }
+console.log(`You types yes ${count} times`);
