@@ -79,6 +79,38 @@
 // Use while loop. Stop only if input is even.
 
 
+// function checkNumber() {
+//     let num = prompt("Enter a number");
+//     if (num === null){
+//         console.warn("You pressed Cancel Button Bhai");
+//         return null;
+//     }
+//     num = num.trim();
+//     if (num === ""){
+//         console.warn("Bhai, kuch likhle space mat de!");
+//         return "";
+//     }
+//     if (isNaN(num)){
+//         console.warn("Bhai, number de de!");
+//         return null;
+//     }
+//     console.log("Confirmed, ye number hai:", Number(num));
+//     return Number(num);
+// }
+
+// while(true){
+//     let num = checkNumber();
+//     if(num===null || num==="")  continue;
+//     if(num%2===0){
+//         console.log("You enterd a even number and loop is break;");
+//         break;
+//     }
+// }
+
+// 
+// 16. Print numbers between two user inputs
+// Input start and end using prompt() → print all between.
+
 function checkNumber() {
     let num = prompt("Enter a number");
     if (num === null){
@@ -98,11 +130,20 @@ function checkNumber() {
     return Number(num);
 }
 
-while(true){
-    let num = checkNumber();
-    if(num===null || num==="")  continue;
-    if(num%2===0){
-        console.log("You enterd a even number and loop is break;");
-        break;
+function userinput(){
+    while(true){
+        let num = checkNumber();
+        if(num===null||num===""){
+            continue;
+        }else{
+            return num;
+        }
     }
 }
+let first_input = userinput();
+let second_input = userinput();
+console.log(`Numbers between your First Input ${first_input} and Second Input ${second_input}`);
+for(let i = first_input+1;i<second_input;i++){
+    console.log(i);
+}
+
