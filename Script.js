@@ -1,5 +1,5 @@
-// 1. print numbers from 1 to 10  loop from 1 to 10 and print each numbers .
+//2. print only even numbers from 1 to 20 use loop and conditions to print even ones . 
 
-for(let a = 1 ; a<=10 ; a++){
-    console.log(a);
+for(let i =1 ; i<=20 ; i++){
+    if(i%2===0) console.log(i);
 }
