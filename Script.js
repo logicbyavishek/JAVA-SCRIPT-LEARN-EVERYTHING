@@ -67,10 +67,42 @@
 // 14. Sum of all odd numbers from 1 to 30
 // Add only odd numbers. Print final sum.
 
-let sum = 0;
-for(let i = 1; i<=30 ; i++){
-    if(i%2!==0){
-        sum+=i;
+// let sum = 0;
+// for(let i = 1; i<=30 ; i++){
+//     if(i%2!==0){
+//         sum+=i;
+//     }
+// }
+// console.log(`sum of all odd numbers from 1 to 30 is ${sum}`);
+
+// 15. Keep asking number until user enters an even number
+// Use while loop. Stop only if input is even.
+
+
+function checkNumber() {
+    let num = prompt("Enter a number");
+    if (num === null){
+        console.warn("You pressed Cancel Button Bhai");
+        return null;
+    }
+    num = num.trim();
+    if (num === ""){
+        console.warn("Bhai, kuch likhle space mat de!");
+        return "";
+    }
+    if (isNaN(num)){
+        console.warn("Bhai, number de de!");
+        return null;
+    }
+    console.log("Confirmed, ye number hai:", Number(num));
+    return Number(num);
+}
+
+while(true){
+    let num = checkNumber();
+    if(num===null || num==="")  continue;
+    if(num%2===0){
+        console.log("You enterd a even number and loop is break;");
+        break;
     }
 }
-console.log(`sum of all odd numbers from 1 to 30 is ${sum}`);
