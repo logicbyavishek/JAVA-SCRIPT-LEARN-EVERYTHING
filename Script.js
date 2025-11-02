@@ -1,10 +1,17 @@
-// 9. Count how many numbers between 1 and 15 are greater than 8
-// Loop and count conditionally.
-let count = 0;
-for(let i = 1 ; i<=15 ; i++){
-    if(i>8){
-        console.log(i);
-        count++;
+// 10. Ask user for password and print access status
+// Hardcoded correct password. Compare with user input.
+let oldPassword = "Password@log";
+
+function checkPassword() {
+    let Password = prompt("Enter Your Password");
+    if (Password === null) return console.warn(" Access not granted -->You pressed Cancel Button Bhai");
+    if (Password === "") return console.warn("Access not granted -->   You enter nothing ");
+    if(oldPassword===Password){
+        console.log("Password Matched succesfully Access Granted");
+        console.log("=== WELCOME🙌 ===");
+    }else{
+        console.log("Incorrect Password Access Denied");
     }
 }
-console.log(`${count} numbers are between 1 and 15 greater than 8 .`);
+
+checkPassword();
