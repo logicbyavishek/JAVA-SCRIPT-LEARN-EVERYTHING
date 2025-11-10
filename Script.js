@@ -1,6 +1,8 @@
-//FUNCTIONS
-function greet(){
-    console.log("Avishek");
+// Parameter Vs Arguments
+
+function param(name){
+    console.log("Hello "+name);
+    
 }
 
-greet();
+param("Avishek");
