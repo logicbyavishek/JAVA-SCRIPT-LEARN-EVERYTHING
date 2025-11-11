@@ -1,10 +1,9 @@
-// First-Class Function
-function shout(msg){
-    return msg.toUpperCase();
+// Higher-Order Functions(HOF)
+function createMultiplier(x){
+    return function (y) {
+        return x*y;
+    };
 }
 
-function ProcessMessage(fn){
-    console.log(fn("hello"));
-}
-
-ProcessMessage(shout);
+let double = createMultiplier(2);
+console.log(double(5));
