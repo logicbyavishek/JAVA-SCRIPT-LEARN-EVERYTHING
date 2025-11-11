@@ -1,5 +1,8 @@
-// IIFE - Immediately Invoked Function Expression
+// Hoisting : Declarations vs Expression 
+// In declaration their is visible function hoisting and expression is not
 
-(function(){
-    console.log("Hey Avishek this Side");
-})();
+hello();
+function hello(){
+    console.log("Avishek Hello");
+    
+}
