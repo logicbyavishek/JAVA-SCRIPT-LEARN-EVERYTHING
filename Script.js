@@ -1,8 +1,5 @@
-// Parameter Vs Arguments
-
-function param(name){
-    console.log("Hello "+name);
-    
+// Return Values
+function sum(a,b){
+    return a+b;
 }
-
-param("Avishek");
+let total = sum(10,11)
