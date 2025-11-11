@@ -1,14 +1,10 @@
-// Default + Rest + Spread
-
-// function multiply(a=1,b=1){
-//     return a*b;
-// }
-// multiply();
-
-function sum(...nums){ // Rest
-    return nums.reduce((acc,val)=> acc+val,0);
+// First-Class Function
+function shout(msg){
+    return msg.toUpperCase();
 }
 
-let nums = [1,2,3];
-console.log(sum(...nums)); //Spread
+function ProcessMessage(fn){
+    console.log(fn("hello"));
+}
 
+ProcessMessage(shout);
