@@ -1,11 +1,5 @@
-//Closures & Lexical Scope
-function outer(){
-    let count = 0;
-    return function () {
-        count++;
-        console.log(count);
-    }
-}
-let counter = outer();
-counter();
-counter();
+// IIFE - Immediately Invoked Function Expression
+
+(function(){
+    console.log("Hey Avishek this Side");
+})();
