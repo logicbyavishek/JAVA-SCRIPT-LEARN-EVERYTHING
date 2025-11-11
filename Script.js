@@ -1,5 +1,6 @@
-// Funtion Expression
-const avi = function (){
-    console.log("Hi Avishek");
+// Arrow Functions
+const dutta =()=>{
+    console.log("Hey Dutta Babu");
+    
 }
-avi();
+dutta();
