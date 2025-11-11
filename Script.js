@@ -1,6 +1,7 @@
-// Arrow Functions
-const dutta =()=>{
-    console.log("Hey Dutta Babu");
-    
+// Default + Rest + Spread
+
+function multiply(a=1,b=1){
+    return a*b;
 }
-dutta();
+multiply();
+
