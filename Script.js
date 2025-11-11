@@ -1,9 +1,11 @@
-// Higher-Order Functions(HOF)
-function createMultiplier(x){
-    return function (y) {
-        return x*y;
-    };
+//Closures & Lexical Scope
+function outer(){
+    let count = 0;
+    return function () {
+        count++;
+        console.log(count);
+    }
 }
-
-let double = createMultiplier(2);
-console.log(double(5));
+let counter = outer();
+counter();
+counter();
