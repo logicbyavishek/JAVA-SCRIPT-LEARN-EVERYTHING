@@ -1,5 +1,5 @@
-// Return Values
-function sum(a,b){
-    return a+b;
+// Funtion Expression
+const avi = function (){
+    console.log("Hi Avishek");
 }
-let total = sum(10,11)
+avi();
