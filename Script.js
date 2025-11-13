@@ -1,15 +1,6 @@
-//Array - Modifiers
-let arr = [1,2,3,4]
-arr.push(5);
+//Array - Extractors (Don't modify original array)
+let arr = [4,3,2,1,0]
+let newArr = arr.slice(1,3);
+arr.sort();
 console.log(arr);
-arr.pop();
-console.log(arr);
-arr.shift();
-console.log(arr);
-arr.unshift(0);
-console.log(arr);
-arr.splice(1,2);
-console.log(arr);
-arr.reverse();
-console.log(arr);
-
+console.log(newArr);
