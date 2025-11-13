@@ -1,5 +1,4 @@
-//Array - 
-let nums = [1,2,3,4];
-nums.find(n=> n>2)
-nums.some(n => n>5)
-nums.every(n => n>0)
+//Array - Destructuring & Spread
+let nums = [1,2,3,4]
+let [first , second] = ["a","b","c"];
+let newArr = [...nums ,99]
