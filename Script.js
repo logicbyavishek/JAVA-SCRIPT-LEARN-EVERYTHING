@@ -1,8 +1,5 @@
-// Hoisting : Declarations vs Expression 
-// In declaration their is visible function hoisting and expression is not
-
-hello();
-let hello =function (){
-    console.log("Avishek Hello");
-    
-}
+// Arrays
+let marks = [90,85,78];
+console.log(marks[1]);
+marks[2]=80;
+console.log(marks[2]);
