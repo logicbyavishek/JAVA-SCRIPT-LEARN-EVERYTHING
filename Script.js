@@ -1,11 +1,12 @@
-// OBJECT - Nesting and Deep Access
+// OBJECT - Destructuring
 let user = {
     name: "Ram",
+    age:12,
     address:{
         city: "Delhi",
         pincode: 151515
     }
 };
 
-console.log(user.address.city);
+let {name , age} = user;
 
