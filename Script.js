@@ -1,12 +1,11 @@
-// OBJECT  
-let avishek = {
-    name : "Avi",
-    age : 22,
-    isEnrolled : true 
+// OBJECT - Nesting and Deep Access
+let user = {
+    name: "Ram",
+    address:{
+        city: "Delhi",
+        pincode: 151515
+    }
 };
 
-console.log(avishek["name"]);
-console.log(avishek.age);
+console.log(user.address.city);
 
-avishek["full name"] = "Avishek Dutta";
-avishek.skills = "Web Development";
