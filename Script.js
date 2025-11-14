@@ -1,4 +1,4 @@
-// OBJECT - Shallow copy
+// OBJECT - Deep copy
 let user = {
     name: "Ram",
     age:12,
@@ -8,6 +8,8 @@ let user = {
     }
 };
 
-let newuser = {...user};
+let deepCopy = JSON.parse(JSON.stringify(user));
 
-let newOne = Object.assign({},user);
+deepCopy.address.city="Basirhat";
+console.log(deepCopy);
+console.log(user);
