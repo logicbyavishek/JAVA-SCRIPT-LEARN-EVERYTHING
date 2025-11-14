@@ -1,4 +1,4 @@
-// OBJECT - Looping Thriugh Objects
+// OBJECT - Object.keys / values /entries
 let user = {
     name: "Ram",
     age:12,
@@ -8,7 +8,6 @@ let user = {
     }
 };
 
-for (let key in user){
-    console.log(key , user[key]);    
-}
-
+console.log(Object.keys(user));
+console.log(Object.values(user));
+console.log(Object.entries(user));
