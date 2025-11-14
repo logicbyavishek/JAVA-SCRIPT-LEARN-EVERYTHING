@@ -1,4 +1,4 @@
-// OBJECT - Deep copy
+// OBJECT - Optional Chaining
 let user = {
     name: "Ram",
     age:12,
@@ -8,8 +8,5 @@ let user = {
     }
 };
 
-let deepCopy = JSON.parse(JSON.stringify(user));
-
-deepCopy.address.city="Basirhat";
-console.log(deepCopy);
-console.log(user);
+console.log(user?.address?.city);
+console.log(user?.address?.email);
