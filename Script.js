@@ -1,13 +1,12 @@
-let h1 = document.getElementById('h1');
-let btn1 = document.getElementById('inc');
-let btn2 = document.getElementById('dec');
-let a = 0;
-btn1.addEventListener('click',function(){
-    a++;
-    h1.innerHTML=a;
-})
+// OBJECT  
+let avishek = {
+    name : "Avi",
+    age : 22,
+    isEnrolled : true 
+};
 
-btn2.addEventListener('click',function(){
-    a--;
-    h1.innerHTML=a;
-})
+console.log(avishek["name"]);
+console.log(avishek.age);
+
+avishek["full name"] = "Avishek Dutta";
+avishek.skills = "Web Development";
