@@ -8,5 +8,7 @@ let user = {
     }
 };
 
-let {name , age} = user;
+let {
+    address:{ city}
+} = user;
 
