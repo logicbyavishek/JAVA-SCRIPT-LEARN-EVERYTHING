@@ -1,4 +1,4 @@
-// OBJECT - Object.keys / values /entries
+// OBJECT - Shallow copy
 let user = {
     name: "Ram",
     age:12,
@@ -8,6 +8,6 @@ let user = {
     }
 };
 
-console.log(Object.keys(user));
-console.log(Object.values(user));
-console.log(Object.entries(user));
+let newuser = {...user};
+
+let newOne = Object.assign({},user);
