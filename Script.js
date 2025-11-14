@@ -1,5 +1,11 @@
-// OBJECT - Computed properties
-let key = "marks";
-let report = {
-    [key]:89
-}
+// DOM - Document Object Model Manipulation
+var btn= document.querySelector("button");
+var box = document.querySelector("#box");
+
+btn.addEventListener('click',function(){
+    let c1 = Math.floor(Math.random()*256)
+    let c2 = Math.floor(Math.random()*256)
+    let c3 = Math.floor(Math.random()*256)
+
+    box.style.backgroundColor = `rgb(${c1}, ${c2}, ${c3})`
+})
