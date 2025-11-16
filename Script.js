@@ -69,11 +69,23 @@ seconds.
 
 //8. Use a `for` loop to print all elements of an array.
 
-let colors = ["red", "blue", "green", "yellow", "purple"];
-for(let i =0 ; i<colors.length ; i++){
-    console.log(colors[i]);
+// let colors = ["red", "blue", "green", "yellow", "purple"];
+// for(let i =0 ; i<colors.length ; i++){
+//     console.log(colors[i]);
+// }
+
+// colors.forEach(function(val){
+//     console.log(val);
+// })
+
+//9. Create an object `person` with keys `name`, `age`, and `city`, and print each key’s value.
+
+let person = {
+    name: "John",
+    age: 30,
+    city: "New York"
 }
 
-colors.forEach(function(val){
-    console.log(val);
-})
+for(let key in person){
+    console.log(key ,":",person[key]);
+}
