@@ -26,7 +26,12 @@ seconds.
 
 // sayHello();
 
-function add(a,b){
-    return a+b ;
+// function add(a,b){
+//     return a+b ;
+// }
+// console.log(add(5,10));
+
+function Guest(name = "Guest"){
+    console.log("Hi " + name);
 }
-console.log(add(5,10));
+Guest();
