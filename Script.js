@@ -45,6 +45,16 @@ seconds.
 // console.log(addNumbers(1,2,3,4,5));
 
 //5.
-(function(){
-    console.log("I run instantly!");
-})();
+// (function(){
+//     console.log("I run instantly!");
+// })();
+//6. Make a nested function where the inner one prints a variable from the outer one.
+
+function nested(){
+    let a = 10 ;
+    function inner(){
+        console.log(a);
+    }
+    inner();
+}
+nested();
