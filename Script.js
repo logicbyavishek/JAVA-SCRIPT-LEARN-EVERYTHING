@@ -1,14 +1,28 @@
 //Level 2 – Functional Thinking & Logic Tasks (Intermediate)
 
 // 1. Write a higher-order function `runTwice(fn)` that takes another function and executes it two times.
-    function runTwice(fn){
-        fn();
-        fn();
+    // function runTwice(fn){
+    //     fn();
+    //     fn();
+    // }
+    // runTwice(function(){
+    //     console.log("Hello Avi (-:");
+    // })
+
+// 2. Create one pure function that always returns the same output for a given input, and one impure function using a global variable. 
+
+    function purefunction(a,b){
+        console.log(a+b);
     }
-    runTwice(function(){
-        console.log("Hello Avi (-:");
-    })
-// 2. Create one pure function that always returns the same output for a given input, and one impure function using a global variable.
+    purefunction(2,3);
+    purefunction(2,3);
+    let global = 1 ;
+    function impure(a){
+        global++;
+        console.log(a+global);
+    }
+    impure(2);
+    impure(2);
 // 3. Write a function that uses object destructuring inside parameters to extract and print `name` and `age`.
 // 4. Demonstrate the difference between normal function and arrow function when used as object methods (the `this` issue). Important
 // 5. Given an array of numbers, use `map()` to create a new array where each number is squared.
