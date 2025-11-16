@@ -50,11 +50,19 @@ seconds.
 // })();
 //6. Make a nested function where the inner one prints a variable from the outer one.
 
-function nested(){
-    let a = 10 ;
-    function inner(){
-        console.log(a);
-    }
-    inner();
-}
-nested();
+// function nested(){
+//     let a = 10 ;
+//     function inner(){
+//         console.log(a);
+//     }
+//     inner();
+// }
+// nested();
+
+//7. Create an array of 5 fruits. Add one at the end and remove one from the beginning.
+
+let fruits = ["apple", "banana", "mango", "grape", "orange"];
+console.log(fruits);
+fruits.push("kiwi");
+fruits.shift();
+console.log(fruits);
