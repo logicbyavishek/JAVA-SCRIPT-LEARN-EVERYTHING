@@ -11,19 +11,26 @@
 
 // 2. Create one pure function that always returns the same output for a given input, and one impure function using a global variable. 
 
-    function purefunction(a,b){
-        console.log(a+b);
-    }
-    purefunction(2,3);
-    purefunction(2,3);
-    let global = 1 ;
-    function impure(a){
-        global++;
-        console.log(a+global);
-    }
-    impure(2);
-    impure(2);
+    // function purefunction(a,b){
+    //     console.log(a+b);
+    // }
+    // purefunction(2,3);
+    // purefunction(2,3);
+    // let global = 1 ;
+    // function impure(a){
+    //     global++;
+    //     console.log(a+global);
+    // }
+    // impure(2);
+    // impure(2);
+
 // 3. Write a function that uses object destructuring inside parameters to extract and print `name` and `age`.
+
+    function abcd({name,age}){
+        console.log(name, age);
+    }
+    abcd({name:"Avi", age:22});
+
 // 4. Demonstrate the difference between normal function and arrow function when used as object methods (the `this` issue). Important
 // 5. Given an array of numbers, use `map()` to create a new array where each number is squared.
 // 6. Use `filter()` to get only even numbers from an array.
