@@ -109,15 +109,29 @@
 
 // 9. Create an object `user` and test the behavior of `Object.freeze()` and `Object.seal()` by adding/changing keys.
 
-    let user = {
-            name : "Avi",
-            age : 22
-    }
+    // let user = {
+    //         name : "Avi",
+    //         age : 22
+    // }
     
-    // Object.freeze(user);
-    // user.name = "New Avi";
-    Object.seal(user);
-    user.age = 23;
-    user.city = "New City";
+    // // Object.freeze(user);
+    // // user.name = "New Avi";
+    // Object.seal(user);
+    // user.age = 23;
+    // user.city = "New City";
 
 // 10. Create a nested object (`user → address → city`) and access the city name inside it.
+    let obj = {
+        user : {
+            name : "Avi",
+            age : 22,
+            address : {
+                city : "New York",
+            }
+        }
+    }
+
+    console.log(obj.user.address.city);
+
+    let {city} = obj.user.address;
+    console.log(city);
