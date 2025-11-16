@@ -26,12 +26,54 @@
 
 // 3. Write a function that uses object destructuring inside parameters to extract and print `name` and `age`.
 
-    function abcd({name,age}){
-        console.log(name, age);
-    }
-    abcd({name:"Avi", age:22});
+    // function abcd({name,age}){
+    //     console.log(name, age);
+    // }
+    // abcd({name:"Avi", age:22});
 
 // 4. Demonstrate the difference between normal function and arrow function when used as object methods (the `this` issue). Important
+
+    console.log(this); //-- if we log this in global area then it's returns window in browser .
+    let a = ()=>{
+        console.log(this);
+    }
+    a(); // -- if we log this in arrow function then it returns window in browser.
+    
+    let obj = {
+        name: "Avi",
+        fnc : function(){
+            console.log(this); // -- if we log this in normal function method of object then it returns the object itself.
+        },
+        fnc2 : ()=>{
+            console.log(this); // -- if we log this in arrow function method of object then it returns window in browser. beacause arrow function doesn't have its own this. this refers the parent obj and obj written in global space and in global space this refers window in browser.
+        }
+    }
+    obj.fnc();
+    obj.fnc2(); // -- Important 
+
+    let obj11 = {
+        name: "Avi",
+        fnc : function(){
+            let a = ()=>{
+                console.log(this); // -- here this refers to obj because arrow function doesn't have its own this so it refers to parent obj which is normal function and in normal function this refers to the object itself.
+            }
+            a(); // -- Important
+        },
+    }
+    obj11.fnc();
+
+    let obj1 = {
+        name: "Avi",
+        fnc : function(){
+            function fnc2(){
+                console.log(this); // -- normally we write function under obj then this value is object we all know  but here fnc2 is written inside the function then fnc2 rebind this and here this refers to window in browser.
+            }
+            fnc2(); // -- Important
+        },
+    }
+    obj1.fnc();
+    
+
 // 5. Given an array of numbers, use `map()` to create a new array where each number is squared.
 // 6. Use `filter()` to get only even numbers from an array.
 // 7. Use `reduce()` to find the total salary from an array of numbers `[1000, 2000, 3000]`.
