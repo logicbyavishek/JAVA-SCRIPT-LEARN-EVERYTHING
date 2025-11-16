@@ -96,14 +96,28 @@
     // console.log(ans);
 
 // 8. Create an array of names and use `some()` and `every()` to test a condition (e.g., all names longer than 3 chars).
-    let names = ["Avishek", "Bob", "Charlie", "Dan" ,"om"];
 
-    let ans1 = names.some(function(val){
-        return val.length > 3;
-    })
+    // let names = ["Avishek", "Bob", "Charlie", "Dan" ,"om"];
 
-    let ans2 = names.every(function(val){
-        return val.length > 3;
-    })
+    // let ans1 = names.some(function(val){
+    //     return val.length > 3;
+    // })
+
+    // let ans2 = names.every(function(val){
+    //     return val.length > 3;
+    // })
+
 // 9. Create an object `user` and test the behavior of `Object.freeze()` and `Object.seal()` by adding/changing keys.
+
+    let user = {
+            name : "Avi",
+            age : 22
+    }
+    
+    // Object.freeze(user);
+    // user.name = "New Avi";
+    Object.seal(user);
+    user.age = 23;
+    user.city = "New City";
+
 // 10. Create a nested object (`user → address → city`) and access the city name inside it.
