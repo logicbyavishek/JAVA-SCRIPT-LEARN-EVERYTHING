@@ -39,8 +39,12 @@ seconds.
 // Guest();
 
 //4.
-function addNumbers(...numbers){
-    return numbers.reduce((acc, val) => acc + val, 0);
-}
-console.log(addNumbers(1,2,3,4,5));
+// function addNumbers(...numbers){
+//     return numbers.reduce((acc, val) => acc + val, 0);
+// }
+// console.log(addNumbers(1,2,3,4,5));
 
+//5.
+(function(){
+    console.log("I run instantly!");
+})();
