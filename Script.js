@@ -89,12 +89,21 @@
 
 // 7. Use `reduce()` to find the total salary from an array of numbers `[1000, 2000, 3000]`.
 
-    let arr = [1000, 2000, 3000];
-    let ans = arr.reduce(function(accumulator , val){
-        return accumulator + val;
-    },0)
-    console.log(ans);
-    
+    // let arr = [1000, 2000, 3000];
+    // let ans = arr.reduce(function(accumulator , val){
+    //     return accumulator + val;
+    // },0)
+    // console.log(ans);
+
 // 8. Create an array of names and use `some()` and `every()` to test a condition (e.g., all names longer than 3 chars).
+    let names = ["Avishek", "Bob", "Charlie", "Dan" ,"om"];
+
+    let ans1 = names.some(function(val){
+        return val.length > 3;
+    })
+
+    let ans2 = names.every(function(val){
+        return val.length > 3;
+    })
 // 9. Create an object `user` and test the behavior of `Object.freeze()` and `Object.seal()` by adding/changing keys.
 // 10. Create a nested object (`user → address → city`) and access the city name inside it.
