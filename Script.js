@@ -80,12 +80,18 @@ seconds.
 
 //9. Create an object `person` with keys `name`, `age`, and `city`, and print each key’s value.
 
-let person = {
-    name: "John",
-    age: 30,
-    city: "New York"
-}
+// let person = {
+//     name: "John",
+//     age: 30,
+//     city: "New York"
+// }
 
-for(let key in person){
-    console.log(key ,":",person[key]);
-}
+// for(let key in person){
+//     console.log(key ,":",person[key]);
+// }
+
+//10. Use `setTimeout()` to log `"Time’s up!"` after 2 seconds.
+
+setTimeout( function(){
+    console.log("Time's up!");
+},2000)
