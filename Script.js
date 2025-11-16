@@ -20,8 +20,13 @@ and `city`, and print each key’s value.
 seconds.
 */
 
-function sayHello(){
-    console.log("Hello JavaScript");
-}
+// function sayHello(){
+//     console.log("Hello JavaScript");
+// }
 
-sayHello();
+// sayHello();
+
+function add(a,b){
+    return a+b ;
+}
+console.log(add(5,10));
