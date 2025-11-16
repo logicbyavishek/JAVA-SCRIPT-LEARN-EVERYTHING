@@ -61,8 +61,19 @@ seconds.
 
 //7. Create an array of 5 fruits. Add one at the end and remove one from the beginning.
 
-let fruits = ["apple", "banana", "mango", "grape", "orange"];
-console.log(fruits);
-fruits.push("kiwi");
-fruits.shift();
-console.log(fruits);
+// let fruits = ["apple", "banana", "mango", "grape", "orange"];
+// console.log(fruits);
+// fruits.push("kiwi");
+// fruits.shift();
+// console.log(fruits);
+
+//8. Use a `for` loop to print all elements of an array.
+
+let colors = ["red", "blue", "green", "yellow", "purple"];
+for(let i =0 ; i<colors.length ; i++){
+    console.log(colors[i]);
+}
+
+colors.forEach(function(val){
+    console.log(val);
+})
