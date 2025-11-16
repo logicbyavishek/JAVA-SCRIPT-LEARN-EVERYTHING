@@ -19,19 +19,28 @@ and `city`, and print each key’s value.
 10. Use `setTimeout()` to log `"Time’s up!"` after 2
 seconds.
 */
-
+//1.
 // function sayHello(){
 //     console.log("Hello JavaScript");
 // }
 
 // sayHello();
 
+//2.
 // function add(a,b){
 //     return a+b ;
 // }
 // console.log(add(5,10));
 
-function Guest(name = "Guest"){
-    console.log("Hi " + name);
+//3.
+// function Guest(name = "Guest"){
+//     console.log("Hi " + name);
+// }
+// Guest();
+
+//4.
+function addNumbers(...numbers){
+    return numbers.reduce((acc, val) => acc + val, 0);
 }
-Guest();
+console.log(addNumbers(1,2,3,4,5));
+
