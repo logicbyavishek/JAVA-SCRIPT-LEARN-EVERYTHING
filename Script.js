@@ -30,7 +30,55 @@ var arr = [
         jerseyLink : "https://i.pinimg.com/736x/81/e6/cc/81e6cc29ae04b0a2aa2c1ee69b0c4b3f.jpg",
         capImg : "https://i.pinimg.com/1200x/95/a9/23/95a923210ba96c084b3555df09d338fe.jpg",
         logo : "https://i.pinimg.com/736x/54/96/c3/5496c328d02c848b352190a0eee94dc1.jpg"
-    }
+    },
+    {
+        team : "DC",
+        fullName : "Delhi Capitals",
+        captain : "Axar Patel",
+        jerseyLink : "https://www.teehubshop.com/wp-content/uploads/2025/04/dc-jersey-2025-600x800.png",
+        capImg : "https://cricholic.in/wp-content/uploads/2025/03/delhi-capitals-name-axar-patel-captain-ahead-ipl-2025.jpg",
+        logo : "https://media.crictracker.com/media/attachments/2022/02/Delhi-Capitals-logo-1.jpg"
+    },
+    {
+        team : "GT",
+        fullName : "Gujarat Titans",
+        captain : "Shubman Gil",
+        jerseyLink : "https://m.media-amazon.com/images/I/61FXFv21I2L._AC_UY1100_.jpg",
+        capImg : "https://goyahills.com/wp-content/uploads/2025/03/Shubman-Gill.jpg",
+        logo : "https://www.tcscricket.com/wp-content/uploads/2025/03/GT-scaled.jpg"
+    },
+    {
+        team : "LSG",
+        fullName : "Lucknow Super Giants",
+        captain : "Rishabh Pant",
+        jerseyLink : "https://m.media-amazon.com/images/I/51JPTE7M1DL._AC_UY1100_.jpg",
+        capImg : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvV0bbyTeRMTsPQdlgL9AFhlqqMUIZ4JBp5g&s",
+        logo : "https://pbs.twimg.com/media/GIpVzqqXIAERWal.png"
+    },
+    {
+        team : "PBKS",
+        fullName : "Punjab Kings",
+        captain : "Shreyas Iyer",
+        jerseyLink : "https://pbs.twimg.com/media/GlXM92WXYAAY_0-.jpg",
+        capImg : "https://d16f573ilcot6q.cloudfront.net/wp-content/uploads/2025/01/PBKS-Shreyas-Iyer-IPL-2025-Auction-1.webp",
+        logo : "https://mir-s3-cdn-cf.behance.net/projects/404/614abb172278773.Y3JvcCwxNTAwLDExNzMsMCwxNA.png"
+    },
+    {
+        team : "RR",
+        fullName : "Rajasthan Royals",
+        captain : "Sanju Samson",
+        jerseyLink : "https://preview.redd.it/rajasthan-royals-jersey-for-ipl-2025-slight-pattern-change-v0-kscu38ikqwfe1.jpeg?auto=webp&s=1ad735736a35d50c3052a385f8de57643287957b",
+        capImg : "https://i.redd.it/4laq0f8ts4pc1.jpeg",
+        logo : "https://img.etimg.com/thumb/width-1600,height-900,imgsize-6316,resizemode-75,msid-119112101/news/sports/rajasthan-royal-tata-ipl-2025-rr-five-players-to-watch-out-for-sanju-samson-vaibhav-suryavanshi-riyan-parag-jofra-archer-yashasvi-jaiswal.jpg"
+    },
+    {
+        team : "SRH",
+        fullName : "Sunrisers Hyderabad",
+        captain : "Pat Cummins",
+        jerseyLink : "https://eu.dookan.com/cdn/shop/files/HY_48dd3ceb-f3f3-404b-8c78-9d4abb56ceb6.png?v=1744108379",
+        capImg : "https://img.ipl.com/upload/20250418/18fe1ede9c1ef1ab8de76751d766232b.jpg",
+        logo : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPd3QizVx5vuHyrfvxVy9ukWTTBb6LDC0N6g&s"
+    },
 ]
 
 let btn = document.querySelector("button");
