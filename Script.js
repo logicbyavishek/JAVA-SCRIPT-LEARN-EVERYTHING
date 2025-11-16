@@ -75,12 +75,18 @@
     
 
 // 5. Given an array of numbers, use `map()` to create a new array where each number is squared.
-    let arr=[1,2,3,4,5,6,7,8,9,10];
-    let newarr = arr.map(function(val){
-        return val*val;
-    })
-    console.log(newarr);
+    // let arr=[1,2,3,4,5,6,7,8,9,10];
+    // let newarr = arr.map(function(val){
+    //     return val*val;
+    // })
+    // console.log(newarr);
 // 6. Use `filter()` to get only even numbers from an array.
+
+    let arr = [1,2,3,4,5,6,7,8,9,10];
+    let newarr = arr.filter(function(val){
+        return val%2===0;
+    })
+    
 // 7. Use `reduce()` to find the total salary from an array of numbers `[1000, 2000, 3000]`.
 // 8. Create an array of names and use `some()` and `every()` to test a condition (e.g., all names longer than 3 chars).
 // 9. Create an object `user` and test the behavior of `Object.freeze()` and `Object.seal()` by adding/changing keys.
