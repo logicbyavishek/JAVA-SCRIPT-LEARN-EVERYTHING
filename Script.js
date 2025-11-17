@@ -1,6 +1,3 @@
-//T2 : Select all <li> elements and change their text using a loop .
-
-let li = document.querySelectorAll("li");
-li.forEach(function(val){
-    console.log(val.textContent)
-})
+// T3 : Select a paragraph and cghange its content with : {<b>Updated</b>by javascript} .
+let p = document.querySelector("p");
+p.innerHTML = "<b>Updated</b> by javascript";
