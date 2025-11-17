@@ -1,5 +1,4 @@
-// T4 How do you get src of an image using JavaScript?
-
-let img = document.querySelector("img");
-console.log(img.src);
-console.log(img.getAttribute("src"));
+// add title attribute to a div through JavaScript
+let div = document.querySelector("div");
+// div.title = "This is a div element";
+div.setAttribute("title", "This is a div element");
