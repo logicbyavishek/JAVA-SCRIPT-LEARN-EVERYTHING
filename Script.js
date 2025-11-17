@@ -1,3 +1,6 @@
-// T1: Select the heading of a page by ID and changes its text to "Welcome to Sheryians!".
-let heading = document.querySelector("#heading");
-heading.textContent = "Welcome to Sheryians!";
+//T2 : Select all <li> elements and change their text using a loop .
+
+let li = document.querySelectorAll("li");
+li.forEach(function(val){
+    console.log(val.textContent)
+})
