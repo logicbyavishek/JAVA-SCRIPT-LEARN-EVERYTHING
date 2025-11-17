@@ -1,3 +1,5 @@
-// T3 : Select a paragraph and cghange its content with : {<b>Updated</b>by javascript} .
-let p = document.querySelector("p");
-p.innerHTML = "<b>Updated</b> by javascript";
+// T4 How do you get src of an image using JavaScript?
+
+let img = document.querySelector("img");
+console.log(img.src);
+console.log(img.getAttribute("src"));
