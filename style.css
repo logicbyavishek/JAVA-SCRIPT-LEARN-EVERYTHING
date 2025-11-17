@@ -7,6 +7,50 @@ html,
 body {
     height: 100%;
     width: 100%;
-    color: white;
+    overflow: hidden;
+}
+body{
+    overflow: hidden;
+}
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: black;
+    flex-direction: column;
+    gap: 20px;
+}
+button{
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    background-color: crimson;
+    color: white;
+    border: none;
+    border-radius: 0.2rem;
+    position: relative;
+    z-index: 10;
+}
+button:active{
+    scale: 0.95;
+}
+h1{
+    color: transparent;
+    font-size: 3rem;
+    z-index: 10;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-image: url("https://cdn.pixabay.com/animation/2023/03/23/18/15/18-15-48-609_512.gif");
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.h1{
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    z-index: 10;
+    border: .025px solid whitesmoke;
 }

@@ -1,5 +1,29 @@
-// create a new list item <li>New Task </li> and add it to end of a <ul>.
-let ul = document.querySelector("ul");
-let li = document.createElement("li");
-li.textContent = "New Task";
-ul.appendChild(li);
+let main = document.querySelector("main");
+let button = document.querySelector("button");
+
+button.addEventListener("click", function(){
+    let div = document.createElement("div");
+
+    let x = Math.random()*100;
+    let y = Math.random()*100;
+
+    let c1 = Math.floor(Math.random()*256);
+    let c2 = Math.floor(Math.random()*256);
+    let c3 = Math.floor(Math.random()*256);
+
+    let sc = Math.random()*3;
+    let rot = Math.random()*360;
+
+    div.style.height = "10px";
+    div.style.width = "10px";
+    div.style.backgroundColor = `rgb(${c1}, ${c2}, ${c3})`;
+    div.style.position = "absolute";
+    div.style.top = x+"%";
+    div.style.left = y+"%";
+    div.style.borderRadius = "50%";
+    div.style.transform = `scale(${sc})`;
+    div.style.transform = ` rotate(${rot}deg)`;
+
+    main.appendChild(div);
+
+});
