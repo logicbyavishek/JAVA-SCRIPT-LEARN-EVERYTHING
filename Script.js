@@ -1,7 +1,6 @@
-let inp = document.querySelector("input");
+let select =document.querySelector("select");
+let h1 =document.querySelector("h1");
 
-inp.addEventListener("input", function(dets){
-    if(dets.data!==null){
-        console.log(dets.data);
-    }
+select.addEventListener("change", function(dets){
+    h1.innerText = `${dets.target.value} Device Selected`;
 })
