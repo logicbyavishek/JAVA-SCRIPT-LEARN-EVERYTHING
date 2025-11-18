@@ -1,6 +1,9 @@
-let select =document.querySelector("select");
 let h1 =document.querySelector("h1");
 
-select.addEventListener("change", function(dets){
-    h1.textContent = `${dets.target.value} Device Selected`;
+window.addEventListener("keydown", function(dets){
+    if(dets.key==" "){
+        h1.textContent="SPC";
+    }else{
+        h1.textContent=dets.key;
+    }
 })
