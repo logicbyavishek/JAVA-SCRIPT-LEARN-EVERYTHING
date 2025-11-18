@@ -1,9 +1,15 @@
-let h1 =document.querySelector("h1");
+let btn = document.querySelector("#btn");
+let input = document.querySelector("input");
 
-window.addEventListener("keydown", function(dets){
-    if(dets.key==" "){
-        h1.textContent="SPC";
+btn.addEventListener("click",function() {
+    input.click();
+});
+
+input.addEventListener("change",function(dets){
+    let files = dets.target.files[0];
+    if(files!==undefined){
+            btn.textContent = files.name;
     }else{
-        h1.textContent=dets.key;
+        btn.textContent ="Upload File"
     }
 })
