@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> JS DOM (Document Object Model)</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
-        <input type="file">
-        <div id="btn">
-            Upload File
+        <div id="box">
+            <p>Cliked download button below to start download your <span>Song.mp3</span> file.</p>
+            <div id="outer">
+                <div id="inner"></div>
+            </div>
+            <div id="bottom">
+                <h1>0%</h1>
+                <button>Download <i class="ri-file-download-line"></i></button>
+            </div>
         </div>
     </main>
     <script src="Script.js"></script>
