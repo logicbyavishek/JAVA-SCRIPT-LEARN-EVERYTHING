@@ -16,36 +16,42 @@ const songs = [
     { id: 't', src: "songs/96.mp3" }
 ];
 
+function playSound(key) {
+    const song = songs.find(s => s.id === key);
+    if (song) {
+        const audio = new Audio(song.src);
+        audio.currentTime = 0;
+        audio.play();
+    }
+}
 
 window.addEventListener("keydown", (e) => {
-    console.log(e);
-    
     const key = e.key;
-    if (key=="0"||key=="1"||key=="2"||key=="3"||key=="4"||key=="5"||key=="6"||key=="7"||key=="8"||key=="9"||key=="q"||key=="w"||key=="r"||key=="t"||key=="e") {
+
+    if (songs.some(s => s.id === key)) {
         const pressedKey = document.getElementById(key);
         if (pressedKey) {
             pressedKey.classList.add("active");
         }
+        playSound(key);
 
-        const song = songs.find(s => s.id === key);
-
-        if (song) {
-            const audio = new Audio(song.src);
-            audio.currentTime = 0;
-            audio.play();
-        }
-    }
-    
-})
-
-
-document.addEventListener("keyup", (e) => {
-    const key = e.key;
-
-    if (key >= 0 && key <= 9) {
-        const pressedKey = document.getElementById(key);
-        if (pressedKey) {
+        setTimeout(() => {
             pressedKey.classList.remove("active");
-        }
+        }, 150);
     }
+});
+
+
+const allButtons = document.querySelectorAll("button");
+
+allButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const key = btn.id || btn.textContent;
+        btn.classList.add("active");
+        playSound(key);
+
+        setTimeout(() => {
+            btn.classList.remove("active");
+        }, 150);
+    });
 });
