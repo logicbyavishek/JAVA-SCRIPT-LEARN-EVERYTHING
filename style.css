@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'helvetica neue';
+  color: white;
 }
 
 html,
@@ -15,49 +16,21 @@ main {
   height: 100%;
   width: 100%;
   background-color: black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.elem{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  background-color: rgba(33, 33, 33, 0.92);
+  padding: 10px;
+  border-radius: 5px;
 }
-
-.card{
-  background-color: white;
-  width: 200px;
-  border-radius: 10px;
-  padding: 20px;
-  position: absolute;
+.elem button{
+  font-size: 1rem;
+  padding: 4px 8px;
+  background-color: blue;
 }
-.card div{
-  position: relative;
-  overflow: hidden;
-}
-.card img{
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  margin-bottom: 10px;
-  border-radius: 10px;
-}
-.card h2{
-  font-size: 20px;
-  text-align: center;
-}
-
-.card i{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 50px;
-  opacity: 0;
-  
-  
-  background-image: url(https://t3.ftcdn.net/jpg/01/14/77/58/360_F_114775804_4yfG9qbKp1NlF1RLo4MUlGIVj9MWhnnc.jpg);
-  background-size: cover;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-
-  transform: translate(-50%,-50%) scale(0) rotate(-60deg);
-  transition: all cubic-bezier(.65,1,.77,1.44) 0.4s;
-}
-
