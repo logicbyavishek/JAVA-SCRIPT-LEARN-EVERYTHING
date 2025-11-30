@@ -9,9 +9,16 @@ body {
     height: 100%;
     width: 100%;
     background-color: black;
+    position: relative;
+    overflow: hidden;
+    cursor: none;
 }
 #box{
-    width: 400px;
-    height: 400px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
     background-color: red;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
 }
