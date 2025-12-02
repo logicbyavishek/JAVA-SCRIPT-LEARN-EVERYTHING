@@ -11,12 +11,13 @@ body {
     background-color: black;
     position: relative;
     overflow: hidden;
+    cursor: none;
 }
 #box{
     position: absolute;
     width: 80px;
     height: 80px;
-    /* transform: translate(-50%,-50%); */
+    transform: translate(-50%,-50%);
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
 }
 img{
