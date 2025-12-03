@@ -8,20 +8,53 @@ html,
 body {
     height: 100%;
     width: 100%;
+}
+
+html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
     background-color: black;
-    position: relative;
-    overflow: hidden;
-    cursor: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#box{
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    transform: translate(-50%,-50%);
-    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
 }
-img{
+
+@keyframes borderAnimate {
+    from {
+        --rotate: 0deg;
+    }
+
+    to {
+        --rotate: 360deg;
+    }
+}
+
+.box {
+    max-width: 300px;
+    padding-inline: 10px;
+    padding-bottom: 10px;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* box-shadow: 0 0 60px rgb(255, 0, 123); */
+    border-radius: 15px;
+    background:
+        linear-gradient(black) padding-box,
+        conic-gradient(from var(--rotate), black, rgb(255, 0, 123), black) border-box;
+    border: 5px solid rgba(255, 255, 255, 0);
+    animation: borderAnimate 10s;
+    animation-iteration-count: infinite;
+}
+
+.box img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
