@@ -1,60 +1,119 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'helvetica neue';
+  color: white;
 }
 
 html,
 body {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
-
-html {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+body{
+  background-color: black;
 }
-
-body {
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+main{
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right bottom,rgb(32, 31, 31),rgb(42, 41, 41),black);
+  padding: 10px;
 }
-
-@property --rotate {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
+section{
+  height: 100%;
+  width: 350px;
+  background-color: black;
+  border-radius: 10px;
+  margin: auto;  
 }
-
-@keyframes borderAnimate {
-    from {
-        --rotate: 0deg;
-    }
-
-    to {
-        --rotate: 360deg;
-    }
+.all-reels{
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
-
-.box {
-    max-width: 300px;
-    padding-inline: 10px;
-    padding-bottom: 10px;
-    color: whitesmoke;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    box-shadow: 0 0 60px rgb(255, 0, 123);
-    border-radius: 15px;
-    background:
-        linear-gradient(black) padding-box,
-        conic-gradient(from var(--rotate), black, rgb(255, 0, 123), black) border-box;
-    border: 5px solid rgba(255, 255, 255, 0);
-    animation: borderAnimate 10s;
-    animation-iteration-count: infinite;
+.all-reels::-webkit-scrollbar{
+  display: none;
 }
+.reels{
+  height: 100%;
+  width: 100%;
+  background-color: aqua;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+.reels video{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.reels .bottom{
+  width: 100%;
+  padding: 30px;
+  background:linear-gradient(rgba(0, 0, 0, 0),black);
+  position: absolute;
+  bottom: 0;
+  
+}
+.bottom .user{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
 
-.box img {
-    width: 100%;
+}
+.bottom .user img{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.bottom .user button{
+  background: transparent;
+  border: none;
+  padding: 4px 8px;
+  border: 1px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.bottom .user button:active{
+  scale: 0.9;
+}
+.title h5{
+  font-weight: 400;
+}
+.right{
+  width: 50px;
+  position: absolute;
+  right: 0;
+  bottom: 10%;
+  /* transform: translateX(100%); */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+}
+.right i{
+  font-size: 25px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.right h6{
+  font-size: 15px;
+  font-weight: 100;
+}
+.right>div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
