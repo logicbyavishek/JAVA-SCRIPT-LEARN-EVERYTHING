@@ -115,49 +115,65 @@ const reels = [
         isFollowed: true,
         caption: "GSAP can literally change your career. Start today.",
         video: "./reels/10.mp4",
-
+        
         userprofile: "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
-    }
-];
-var sum = '';
-reels.forEach(function(elem){
-    sum = sum +`<div class="reels">
-          <video autoplay loop muted src="${elem.video}"></video>
-
-          <div class="bottom">
-            <div class="user">
-              <img src="${elem.userprofile}" alt="">
-              <h4 title="username">${elem.username}</h4>
-              <button title="follow button">${elem.isFollowed?'Following':'Follow'}</button>
-            </div>
-            <div class="title">
-                <h5>${elem.caption}</h5>
-              </div>
-          </div>
-          <div class="right">
-            <div class="like icon">
-              <h4 class="like-icon" title="${elem.isLiked?'I like this"><i class="ri-heart-3-line':'I like this"><i class=" love ri-heart-3-fill'}"></i></h4>
-              <h6>${elem.likeCount}</h6>
-            </div>
-
-            <div class="comment icon">
-              <h4 class="comment-icon" title="comment"><i class="ri-chat-1-line"></i></h4>
-              <h6>${elem.commentCount}</h6>
-            </div>
-
-            <div class="share icon">
-              <h4 class="share-icon" title="Share"><i class="ri-share-forward-line"></i></h4>
-              <h6>80</h6>
-            </div>
-
-            <div class="menu icon">
-              <h4 class="menu-icon" title="more"><i class="ri-more-2-fill"></i></h4>
-            </div>
-
-          </div>
-        </div>`
-});
-
+      }
+    ];
 let allReels = document.querySelector('.all-reels');
 
-allReels.innerHTML=sum;
+function addData(){
+      var sum = '';
+    reels.forEach(function(elem,idx){
+      
+        sum = sum +`<div class="reels">
+              <video autoplay loop muted src="${elem.video}"></video>
+
+              <div class="bottom">
+                <div class="user">
+                  <img src="${elem.userprofile}" alt="">
+                  <h4 title="username">${elem.username}</h4>
+                  <button title="follow button">${elem.isFollowed?'Following':'Follow'}</button>
+                </div>
+                <div class="title">
+                    <h5>${elem.caption}</h5>
+                  </div>
+              </div>
+              <div class="right">
+                <div class="like icon" id=${idx}>
+                  <h4 class="like-icon icon">${elem.isLiked?'<i class="love ri-heart-3-fill"></i>':'<i class="ri-heart-3-line"></i>'}</h4>
+                  <h6>${elem.likeCount}</h6>
+                </div>
+
+                <div class="comment icon">
+                  <h4 class="comment-icon" title="comment"><i class="ri-chat-1-line"></i></h4>
+                  <h6>${elem.commentCount}</h6>
+                </div>
+
+                <div class="share icon">
+                  <h4 class="share-icon" title="Share"><i class="ri-share-forward-line"></i></h4>
+                  <h6>80</h6>
+                </div>
+
+                <div class="menu icon">
+                  <h4 class="menu-icon" title="more"><i class="ri-more-2-fill"></i></h4>
+                </div>
+
+              </div>
+            </div>`
+    });
+    allReels.innerHTML=sum;
+}
+
+addData();
+
+allReels.addEventListener('click',function(dets){
+  if(reels[dets.target.id].isLiked){
+    reels[dets.target.id].likeCount--;
+    reels[dets.target.id].isLiked=false;
+  }else{
+    reels[dets.target.id].likeCount++;
+    reels[dets.target.id].isLiked=true;
+  }
+  
+  addData();
+});
