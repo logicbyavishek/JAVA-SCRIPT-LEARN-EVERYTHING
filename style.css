@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: monospace;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 html,
 body {
@@ -16,24 +16,41 @@ body{
   justify-content: center;
 }
 
-@property --bgColor{
-  syntax: "<color>";
-  initial-value: red;
+@property --rotate{
+  syntax: "<angle>";
+  initial-value: 0deg;
   inherits: false;
 }
 
-@keyframes animated{
+@keyframes rotation {
   from{
-    --bgColor:red;
+    --rotate:0deg;
   }
   to{
-    --bgColor:blue;
+    --rotate:360deg;
   }
 }
 
 .box{
-  height: 300px;
-  width: 500px;
-  background: var(--bgColor);
-  animation: animated 10s infinite alternate;
+  max-width: 300px;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-inline: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  border: 5px solid rgba(0, 0, 0, 0);
+}
+.box:hover{
+  background: linear-gradient(rgb(0, 0, 0)) padding-box,
+  conic-gradient(from var(--rotate),black,rgb(255, 57, 199)) border-box;
+  box-shadow: 0px 0px 50px rgb(255, 57, 199) ;
+  color: rgb(255, 57, 199);
+  text-shadow: 0px 0px 5px rgb(255, 57, 199);
+  animation: rotation 10s;
+  animation-iteration-count: infinite;
+}
+.box img{
+  width: 100%;
 }
