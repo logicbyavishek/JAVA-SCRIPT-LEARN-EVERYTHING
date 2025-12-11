@@ -16,25 +16,24 @@ body{
   justify-content: center;
 }
 
+@property --bgColor{
+  syntax: "<color>";
+  initial-value: red;
+  inherits: false;
+}
+
+@keyframes animated{
+  from{
+    --bgColor:red;
+  }
+  to{
+    --bgColor:blue;
+  }
+}
+
 .box{
   height: 300px;
   width: 500px;
-  animation: bgc 3s infinite forwards alternate ;
-}
-@keyframes bgc {
-  from{
-    background-color: #fff;
-    border-radius: 10px;
-    scale: 1;
-    box-shadow: 0px 0px 100px red;
-    rotate: 0deg;
-  }
-  to{
-    background-color: red;
-    border-radius: 50px;
-    scale: 0.5;
-    box-shadow: 0px 0px 100px white;
-    rotate: 360deg;
-
-  }
+  background: var(--bgColor);
+  animation: animated 10s infinite alternate;
 }
