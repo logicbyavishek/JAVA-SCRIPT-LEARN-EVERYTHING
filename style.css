@@ -1,27 +1,22 @@
-:root{
-  --white:rgba(255, 255, 255, 0);
-  --black:black;
-  --x:100px;
-  --y:100px;
-}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: monospace;
 }
 html,
 body {
     height: 100%;
     width: 100%;
 }
-main{
-  height: 100%;
-  width: 100%;
-  background-image: url(https://images.unsplash.com/photo-1763888428856-edd6bdfe477a?q=80&w=1175&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-  background-size:contain;
+body{
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.cursor{
-  height: 100%;
-  width: 100%;
-  background: radial-gradient(150px at var(--x) var(--y) ,var(--white)0%,rgba(27, 27, 27, 0.935)70%,var(--black));
+
+P{
+  color: rgb(68, 243, 68);
+  font-size: 3rem;
 }
