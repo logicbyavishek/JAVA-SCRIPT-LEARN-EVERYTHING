@@ -19,6 +19,22 @@ body{
 .box{
   height: 300px;
   width: 500px;
-  background:conic-gradient(violet,indigo,blue,green,yellow,orange,red);
-  
+  animation: bgc 3s infinite forwards alternate ;
+}
+@keyframes bgc {
+  from{
+    background-color: #fff;
+    border-radius: 10px;
+    scale: 1;
+    box-shadow: 0px 0px 100px red;
+    rotate: 0deg;
+  }
+  to{
+    background-color: red;
+    border-radius: 50px;
+    scale: 0.5;
+    box-shadow: 0px 0px 100px white;
+    rotate: 360deg;
+
+  }
 }
