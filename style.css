@@ -10,13 +10,15 @@ body {
     width: 100%;
 }
 body{
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-P{
-  color: rgb(68, 243, 68);
-  font-size: 3rem;
+.box{
+  height: 200px;
+  width: 400px;
+  background-color: whitesmoke;
+  box-shadow: 0px 0px 100px green;
 }
