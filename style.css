@@ -14,52 +14,34 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  anchor-name: --someanchor;
 }
-
-@property --rotate{
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-
-@keyframes rotation {
-  from{
-    --rotate:0deg;
-  }
-  to{
-    --rotate:360deg;
-  }
-}
-
 .box{
-  max-width: 300px;
-  color: whitesmoke;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding-inline: 10px;
-  padding-bottom: 10px;
-  border-radius: 10px;
-  border: 0px solid rgba(0, 0, 0, 0);
-  background: linear-gradient(rgb(0, 0, 0)) padding-box,
-  conic-gradient(from var(--rotate),black,rgb(255, 57, 199)) border-box;
-  box-shadow: 0px 0px 0px rgb(255, 57, 199) ;
-  text-shadow: 0px 0px 0px rgb(255, 57, 199);
-  animation: rotation 5s;
-  animation-iteration-count: infinite;
-  animation-timing-function:linear;
-  animation-play-state: paused;
-  transition: all 0.3s linear;
+  width: 200px;
+  height: 200px;
 }
-
 .box:hover{
-  animation-play-state: running;
-  border-width: 5px;
-  color: rgb(255, 57, 199);
-  box-shadow: 0px 0px 50px rgb(255, 57, 199) ;
-  text-shadow: 0px 0px 10px rgb(255, 57, 199);
-}
+  anchor-name: --someanchor;
 
-.box img{
-  width: 100%;
+}
+.red{
+  background-color: red;
+}
+.blue{
+  background-color: blue;
+}
+.green{
+  background-color: green;
+}
+.anchor{
+  background-color: whitesmoke;
+  position: absolute;
+  position-anchor: --someanchor;
+  top: anchor(top);
+  left: anchor(left);
+  right: anchor(right);
+  bottom: anchor(bottom);
+  transition: all 0.3s linear;
+  mix-blend-mode: exclusion;
+  pointer-events: none;
 }
