@@ -11,33 +11,4 @@ body {
 }
 body{
   background-color: rgb(3, 3, 3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5rem;
-}
-.box{
-  width: 200px;
-  height: 200px;
-  transition: all 0.3s linear;
-}
-
-.red{
-  background-color: red;
-}
-.blue{
-  background-color: blue;
-}
-.green{
-  background-color: green;
-}
-body:has(.box:hover) .box{
-  scale: 0.7;
-  opacity: 0.8;
-  
-}
-body .box:hover{
-  scale: 1 !important ;
-  opacity: 1 !important;
-  
 }
