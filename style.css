@@ -14,16 +14,14 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  anchor-name: --someanchor;
+  gap: 5rem;
 }
 .box{
   width: 200px;
   height: 200px;
+  transition: all 0.3s linear;
 }
-.box:hover{
-  anchor-name: --someanchor;
 
-}
 .red{
   background-color: red;
 }
@@ -33,15 +31,13 @@ body{
 .green{
   background-color: green;
 }
-.anchor{
-  background-color: whitesmoke;
-  position: absolute;
-  position-anchor: --someanchor;
-  top: anchor(top);
-  left: anchor(left);
-  right: anchor(right);
-  bottom: anchor(bottom);
-  transition: all 0.3s linear;
-  mix-blend-mode: exclusion;
-  pointer-events: none;
+body:has(.box:hover) .box{
+  scale: 0.7;
+  opacity: 0.8;
+  
+}
+body .box:hover{
+  scale: 1 !important ;
+  opacity: 1 !important;
+  
 }
