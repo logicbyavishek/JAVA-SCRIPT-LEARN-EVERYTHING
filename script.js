@@ -1,11 +1,13 @@
-function Person(name) {
-  this.name = name;
+class Car {
+  constructor(brand, price) {
+    this.brand = brand;
+    this.price = price;
+  }
+
+  drive() {
+    console.log(`${this.brand} is driving...`);
+  }
 }
 
-// Adding method using prototype
-Person.prototype.sayHi = function () {
-  console.log(`Hi, I am ${this.name}`);
-};
-
-const p1 = new Person("Avishek");
-p1.sayHi();
+const car1 = new Car("BMW", 5000000);
+car1.drive();
