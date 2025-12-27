@@ -1,13 +1,21 @@
-class Car {
-  constructor(brand, price) {
-    this.brand = brand;
-    this.price = price;
-  }
+function createToaster(config){
+    return function(message){
+        let div = document.createElement('div');
+        div.className = `fixed ${config.positionX==='right'?"right-10":"left-10"} ${config.positionY==='top'?"top-10":"bottom-10"} p-4 rounded shadow-lg  ${config.theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white text-black'} pointer-events-none`;
+        div.innerText = message;
+        document.body.appendChild(div);
 
-  drive() {
-    console.log(`${this.brand} is driving...`);
-  }
+        setTimeout(() => {
+            div.remove();
+        }, config.duration * 1000);
+    }
 }
 
-const car1 = new Car("BMW", 5000000);
-car1.drive();
+let toaster = createToaster({
+    positionX: 'left',
+    positionY: 'bottom',
+    theme: 'dark',
+    duration: 3,
+})
+
+toaster('This is a toaster notification!');
