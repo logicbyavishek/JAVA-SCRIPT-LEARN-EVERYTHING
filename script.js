@@ -1,21 +1,40 @@
-function createToaster(config){
-    return function(message){
-        let div = document.createElement('div');
-        div.className = `fixed ${config.positionX==='right'?"right-10":"left-10"} ${config.positionY==='top'?"top-10":"bottom-10"} p-4 rounded shadow-lg  ${config.theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white text-black'} pointer-events-none`;
-        div.innerText = message;
-        document.body.appendChild(div);
+class YoutubeChannel{
+    constructor(){
+        this.subscribers = [];
+    }
 
-        setTimeout(() => {
-            div.remove();
-        }, config.duration * 1000);
+    subscribe(user){
+        this.subscribers.push(user);
+        user.update(`${user.name} ,Subscribed to channel`);
+    }
+
+    unsubscribe(user){
+        this.subscribers = this.subscribers.filter(subscriber => subscriber !== user);
+        user.update(`${user.name} ,un-subscribed to channel`);
+    }
+
+    notify(videoTitle){
+        this.subscribers.forEach(subscriber => subscriber.update(videoTitle));
     }
 }
 
-let toaster = createToaster({
-    positionX: 'left',
-    positionY: 'bottom',
-    theme: 'dark',
-    duration: 3,
-})
+class user{
+    constructor(name){
+        this.name = name;
+    }
+    update(message){
+        console.log(`Notification for ${this.name}: ${message}`);
+    }
+}
 
-toaster('This is a toaster notification!');
+
+let sheryians = new YoutubeChannel();
+let user1 = new user("Avishek");
+let user2 = new user("Rohit");
+
+sheryians.subscribe(user1);
+sheryians.subscribe(user2);
+sheryians.notify("New video uploaded: JavaScript Design Patterns");
+
+sheryians.unsubscribe(user1);
+sheryians.notify("New video uploaded: Observer Pattern in JavaScript");
