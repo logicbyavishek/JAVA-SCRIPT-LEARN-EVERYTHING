@@ -1,40 +1,20 @@
-class YoutubeChannel{
-    constructor(){
-        this.subscribers = [];
-    }
+const input = document.getElementById("debounce-input");
+const output = document.getElementById("output");
 
-    subscribe(user){
-        this.subscribers.push(user);
-        user.update(`${user.name} ,Subscribed to channel`);
-    }
-
-    unsubscribe(user){
-        this.subscribers = this.subscribers.filter(subscriber => subscriber !== user);
-        user.update(`${user.name} ,un-subscribed to channel`);
-    }
-
-    notify(videoTitle){
-        this.subscribers.forEach(subscriber => subscriber.update(videoTitle));
-    }
+// Debounce function
+function debounce(fn, delay) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), delay);
+  };
 }
 
-class user{
-    constructor(name){
-        this.name = name;
-    }
-    update(message){
-        console.log(`Notification for ${this.name}: ${message}`);
-    }
+// Action to perform
+function sayHello() {
+  output.textContent = "hello";
+  console.log("hello");
 }
 
-
-let sheryians = new YoutubeChannel();
-let user1 = new user("Avishek");
-let user2 = new user("Rohit");
-
-sheryians.subscribe(user1);
-sheryians.subscribe(user2);
-sheryians.notify("New video uploaded: JavaScript Design Patterns");
-
-sheryians.unsubscribe(user1);
-sheryians.notify("New video uploaded: Observer Pattern in JavaScript");
+// Debounced listener
+input.addEventListener("input", debounce(sayHello, 1000));
