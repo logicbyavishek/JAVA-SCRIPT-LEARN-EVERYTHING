@@ -1,20 +1,18 @@
-const input = document.getElementById("debounce-input");
-const output = document.getElementById("output");
+const input = document.getElementById("throttle-input");
 
-// Debounce function
-function debounce(fn, delay) {
-  let timer;
+function throttle(fn, delay) {
+  let lastCall = 0;
   return (...args) => {
-    clearTimeout(timer);
-    timer = setTimeout(() => fn.apply(this, args), delay);
+    const now = Date.now();
+    if (now - lastCall >= delay) {
+      lastCall = now;
+      fn.apply(this, args);
+    }
   };
 }
 
-// Action to perform
 function sayHello() {
-  output.textContent = "hello";
   console.log("hello");
 }
 
-// Debounced listener
-input.addEventListener("input", debounce(sayHello, 1000));
+input.addEventListener("input", throttle(sayHello, 1000));
