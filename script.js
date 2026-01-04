@@ -2,8 +2,8 @@ let obj ={
   name:"Avishek"
 };
 
-function abcd (){
-  console.log(this);
+function abcd (a,b,c){
+  console.log(this,a,b,c);
 }
 
-abcd.call(obj);
+abcd.apply(obj,[1,2,3]); 
