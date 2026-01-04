@@ -1,13 +1,9 @@
-class Bottle{
-  constructor(){
-    console.log("hello");
-  }
-  fill(){
-    console.log("filling");
-  }
-  drink(){
-    console.log("drinking");
-  }
+let obj ={
+  name:"Avishek"
+};
+
+function abcd (){
+  console.log(this);
 }
 
-const bottle1 = new Bottle();
+abcd.call(obj);
