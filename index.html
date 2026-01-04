@@ -3,22 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Throttling Demo</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>OOPS in JS</title>
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+    }
+    body{
+      background-color: #333;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-
-  <div class="bg-white shadow-xl rounded-xl p-10 w-96 flex flex-col items-center gap-5">
-    <h1 class="text-2xl font-semibold text-gray-700">Throttle Example</h1>
-
-    <input
-      type="text"
-      id="throttle-input"
-      placeholder="Type something..."
-      class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
-    />
-  </div>
-
+<body class="bg-black-900 flex items-center justify-center min-h-screen">
   <script src="script.js"></script>
 </body>
 </html>

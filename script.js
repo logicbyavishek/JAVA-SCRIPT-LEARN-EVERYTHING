@@ -1,18 +1,13 @@
-const input = document.getElementById("throttle-input");
-
-function throttle(fn, delay) {
-  let lastCall = 0;
-  return (...args) => {
-    const now = Date.now();
-    if (now - lastCall >= delay) {
-      lastCall = now;
-      fn.apply(this, args);
-    }
-  };
+class Bottle{
+  constructor(){
+    console.log("hello");
+  }
+  fill(){
+    console.log("filling");
+  }
+  drink(){
+    console.log("drinking");
+  }
 }
 
-function sayHello() {
-  console.log("hello");
-}
-
-input.addEventListener("input", throttle(sayHello, 1000));
+const bottle1 = new Bottle();
