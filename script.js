@@ -1,9 +1,21 @@
-let Animal = class{
+class Animal{
   constructor(){
-    this.type = "Animal";
-    this.name ="dodo";
-    this.breed ="Dog";
+    this.hand = 2;
+    this.leg = 2;
+  }
+  breathe(){}
+  eat(){}
+}
+
+class Dog extends Animal{
+  constructor(){
+    super();
+    this.tail = 1;
+  }
+  bark(){
+    console.log("Woof Woof");
   }
 }
 
-let dog = new Animal();
+const myDog = new Dog();
+console.log(myDog.hand);
