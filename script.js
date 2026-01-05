@@ -1,21 +1,17 @@
-class Animal{
+class Animal {
   constructor(){
-    this.hand = 2;
-    this.leg = 2;
+    this._age = 16;
   }
-  breathe(){}
-  eat(){}
-}
-
-class Dog extends Animal{
-  constructor(){
-    super();
-    this.tail = 1;
+  set age(val){
+    if(val<0){
+      console.log("Age cannot be negative");
+    }
+    return this._age = val;
   }
-  bark(){
-    console.log("Woof Woof");
+  get age(){
+    return this._age;
   }
 }
 
-const myDog = new Dog();
-console.log(myDog.hand);
+const ani = new Animal();
+ani.age = 100;
