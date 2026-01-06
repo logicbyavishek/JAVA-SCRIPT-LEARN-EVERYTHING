@@ -1,20 +1,28 @@
-function getUser(username , cb){
-    console.log("Fetching user from DB...");
+function loginUser(user , cb){
+    console.log("User logging in ...");
     setTimeout(() => {
-        cb({id:1223, username: username});
+        cb({id: 1, name: user});
     }, 1000);
 }
-
-function getUserPosts(ussrId,cb){
-    console.log("Fetching posts from DB...");
+function fetchPermissions(userID , cb){
+    console.log("Fetching user permissions ...");
     setTimeout(() => {
-        cb(["post1","post2","post3"]);
-    }, 1000);
+        cb(["read", "write", "execute"]);
+    }, 2000);
+}
+function loadDashboard(permissions,cb){
+    console.log("Loading dashboard ...");
+    setTimeout(() => {
+        cb();
+    }, 3000);
 }
 
-getUser("Avi",function(obj){
-    console.log("fetching userID .....")
-    getUserPosts(obj.id,function(posts){
-        console.log(posts);
+
+loginUser("Avi",function(obj){
+    fetchPermissions(obj.id,function(permissions){
+        loadDashboard(permissions,function(){
+            console.log("Dashboard loaded with permissions: " + permissions);
+        });
     });
-})
+});
+
