@@ -1,17 +1,12 @@
-class Animal {
-  constructor(){
-    this._age = 16;
-  }
-  set age(val){
-    if(val<0){
-      console.log("Age cannot be negative");
-    }
-    return this._age = val;
-  }
-  get age(){
-    return this._age;
+var car ={
+  make: 'Toyota',
+  model: 'Corolla',
+  getDetails: function() {
+    return `${this.make} ${this.model}`;
+  },
+  getmodel: () => {
+    return this.model;
   }
 }
-
-const ani = new Animal();
-ani.age = 100;
+console.log(car.getDetails()); // Output: Toyota Corolla
+console.log(car.getmodel());   // Output: undefined
