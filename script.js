@@ -1,11 +1,9 @@
-function abcd(fn){
-    fn(function(fn2){
-        fn2();
-    });
+function afterDelay(time , cb){
+    setTimeout(() => {
+        cb()
+    }, time);
 }
 
-abcd(function(fn1){
-    fn1(function(){
-        console.log("Hello, World!");
-    });
+afterDelay(1000, function(){
+    console.log("callback executed");
 });
