@@ -1,11 +1,12 @@
-const input = document.getElementById("searchInput");
+function checkAge(age) {
+  if (age < 18) {
+    throw new Error("Underage!");
+  }
+  return "Allowed";
+}
 
-let timer;
-
-input.addEventListener("input", function () {
-  clearTimeout(timer);
-
-  timer = setTimeout(() => {
-    console.log("hello");
-  }, 1000);
-});
+try {
+  checkAge(15);
+} catch (e) {
+  console.error(e.message);
+}
