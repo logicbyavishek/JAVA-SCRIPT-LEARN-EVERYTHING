@@ -1,8 +1,15 @@
-function printEachChar(str) {
+/**
+ * @param {string} str
+ * @return {string}
+ */
+ 
+function reverseString(str) {
     // Write your logic here
-    for(let i=0 ; i<str.length ; i++){
-        console.log(str[i])
+    let rev = ""
+    for(let i =str.length-1 ; i>=0 ; i--){
+        rev+=str.charAt(i)
     }
+    return rev
 }
 
-module.exports = { printEachChar };
+module.exports = { reverseString };
