@@ -1,12 +1,8 @@
-function checkAge(age) {
-  if (age < 18) {
-    throw new Error("Underage!");
-  }
-  return "Allowed";
+function printEachChar(str) {
+    // Write your logic here
+    for(let i=0 ; i<str.length ; i++){
+        console.log(str[i])
+    }
 }
 
-try {
-  checkAge(15);
-} catch (e) {
-  console.error(e.message);
-}
+module.exports = { printEachChar };
