@@ -2,14 +2,20 @@
  * @param {string} str
  * @return {string}
  */
- 
-function reverseString(str) {
-    // Write your logic here
-    let rev = ""
-    for(let i =str.length-1 ; i>=0 ; i--){
-        rev+=str.charAt(i)
+function isPalindromeInPlace(str) {
+    // Write your code here
+    let i=0
+    let j = str.length-1
+    let palindrome = true
+    while(i<j){
+        if(str.charAt(i)!=str.charAt(j)){
+            palindrome=false
+            break
+        }
+        i++
+        j--
     }
-    return rev
+    return palindrome==true?"Yes":"No"
 }
 
-module.exports = { reverseString };
+module.exports = { isPalindromeInPlace };
