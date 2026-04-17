@@ -95,3 +95,19 @@ console.log(typeof "hello");
 **Explanation:** In JavaScript, string literals return `"string"` when used with `typeof`.
 
 ---
+
+## 6. Guess the Output
+
+**Question:** What will str.includes("app") return for let str = "apple"?
+
+**Options:**
+
+* A) `true`
+* B) `false`
+* C) `undefined`
+* D) `NaN`
+
+**Answer:** A) `true`
+**Explanation:** includes() checks if the string contains the specified substring. `app` is part of `apple`
+
+---
